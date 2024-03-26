@@ -9,9 +9,9 @@ benchmark() {
     runrust=""
     runjava=""
     runpython=""
-    runcpp=""
-    runexample="python3 example.py"
-    runcurrent=$runexample
+    runcpp="./main"
+    #runexample="python3 example.py"
+    runcurrent=$runcpp
 
     echo "Benchmarking Algorithm $algorithm with input $input_file"
     result=$(/usr/bin/time -f "%e" ${runcurrent} --algorithm $algorithm < $input_file 2>&1 >/dev/null)
